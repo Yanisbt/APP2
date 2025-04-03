@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Une petite page HTML</title>
+    </head>
+    <body>
+        <h1>Hello les SUP !</h1>
+	<div class="container" id="main-content">
+  		<p class="text">Bienvenue sur notre site web !</p>
+  		<a href="https://example.com" target="_blank">Cliquez ici pour en savoir plus</a>
+	</div>
+    </body>
+</html>
