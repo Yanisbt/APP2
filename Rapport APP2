@@ -4,3 +4,13 @@ La difficulté était principalement de trouver un moyen de récupérer les bali
 Nous avons repérés que les balises de déclarations spéciales causaient des erreurs, nous avons donc décidé de les ignorer. 
 Pour chaque erreur repérée, on l'ajoute dans une liste, qui va être renvoyée à la fin pour éclairer l'utilisateur sur le malfonctionnement de son programme HTML.
 
+Notre code à pour but de vérifier si les balises HTML ou XML d’un fichier sont correctement ouvertes et fermées.
+Pour cela, il commence par lire le contenu du fichier, puis extrait toutes les balises présentes.
+Il utilise une structure de pile pour suivre l’ordre d’ouverture des balises. 
+Lorsqu’il rencontre une balise ouvrante (comme <div>), il l’ajoute à la pile. 
+Lorsqu’il rencontre une balise fermante (comme </div>), il vérifie si elle correspond à la dernière balise ouverte ;
+si ce n’est pas le cas, une erreur est enregistrée. 
+Les balises auto-fermées (comme <img />) et les déclarations spéciales (comme <!DOCTYPE>) sont ignorées. 
+À la fin, si des balises sont restées dans la pile, cela signifie qu’elles n’ont pas été fermées, et une erreur est également signalée pour chacune d’elles.
+Le programme renvoie une liste des erreurs détectées, ou un message indiquant qu’il n’y a aucune erreur si tout est correctement structuré.
+
