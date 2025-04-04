@@ -1,0 +1,6 @@
+Notre programme utilise la librairie "re" qui permet de repérer des caractères récurrents (ici les "<" ou "/>"). Le fonctionnement du programme repose sur les piles, qui collectent les balises ouvertes une à une, et qui les enlèves dès qu'elles se referment.
+
+La difficulté était principalement de trouver un moyen de récupérer les balises dans le code, et de comprendre le fonctionnement de la librairie re utilisée. 
+Nous avons repérés que les balises de déclarations spéciales causaient des erreurs, nous avons donc décidé de les ignorer. 
+Pour chaque erreur repérée, on l'ajoute dans une liste, qui va être renvoyée à la fin pour éclairer l'utilisateur sur le malfonctionnement de son programme HTML.
+
